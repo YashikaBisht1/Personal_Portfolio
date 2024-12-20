@@ -4,10 +4,8 @@ from pathlib import Path
 
 # --- PATH SETTINGS ---
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
-#css_file = r"C:\Users\bisht\OneDrive\Desktop\Portfolio\styles\main.css"
 resume_file = r"C:\Users\bisht\OneDrive\Desktop\Portfolio\assets\cv.pdf.pdf"
 profile_pic = r"C:\Users\bisht\OneDrive\Desktop\Portfolio\assets\profile-pic.png"
-
 
 # --- GENERAL SETTINGS ---
 PAGE_TITLE = "Digital CV | Yashika Bisht"
@@ -20,7 +18,8 @@ EMAIL = "bishty2005@gmail.com"
 SOCIAL_MEDIA = {
     "GitHub": "https://github.com/YashikaBisht1",
     "LinkedIn": "https://linkedin.com/in/yashika-bisht-20050a24a",
-    "Leetcode": "https://leetcode.com/bishty2005/"
+    "Leetcode": "https://leetcode.com/bishty2005/",
+    "Medium": "https://medium.com/@bishty2005"
 }
 PROJECTS = {
     "Credit Card Fraud Detection": {
@@ -28,15 +27,17 @@ PROJECTS = {
         "link": "https://github.com/YashikaBisht1/Credit-Card-Fraud-detection.git"
     },
     "Intelligent Code Debugger and Summarizer": {
-        "description": "Developed an AI-powered Python Code Debugger and Summarizer using Streamlit, CodeT5, and Google GenAI to detect syntax errors, identify unused variables, generate bug fixes, and summarize code functionality with data structures included",
+        "description": "Developed an AI-powered Python Code Debugger and Summarizer using Streamlit, CodeT5, and Google GenAI to detect syntax errors, identify unused variables, generate bug fixes, and summarize code functionality.",
         "link": "https://github.com/YashikaBisht1/Intelligent-code-debugger-and-Summariser.git"
+    },
+    "Personalized Chatbot (Work in Progress)": {
+        "description": "Building a personalized chatbot leveraging Streamlit and LLMs to enhance user interactions and query handling.",
+        "link": "#"
     }
 }
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
-# --- LOAD CSS, PDF & PROFILE PIC ---
-with open(css_file) as f:
-    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+# --- LOAD PDF & PROFILE PIC ---
 with open(resume_file, "rb") as pdf_file:
     PDFbyte = pdf_file.read()
 profile_pic = Image.open(profile_pic)
@@ -50,11 +51,11 @@ with col2:
     st.title(NAME)
     st.write(DESCRIPTION)
     st.download_button(
-    label="\U0001F4C4 Download Resume",
-    data=PDFbyte,
-    file_name=Path(resume_file).name,  # Use Path to get the name of the file
-    mime="application/octet-stream",
-)
+        label="\U0001F4C4 Download Resume",
+        data=PDFbyte,
+        file_name=Path(resume_file).name,
+        mime="application/octet-stream",
+    )
 
     st.write("\U0001F4E7", EMAIL)
 
@@ -82,10 +83,11 @@ st.write('\n')
 st.subheader("Technical Skills")
 st.write(
     """
-    - \U0001F469\u200D\U0001F4BB Programming: Python (Intermediate), C++, C, JavaScript (Novice), Java (Novice).
+    - \U0001F469‍\U0001F4BB Programming: Python (Intermediate), C++, C, JavaScript (Novice), Java (Novice).
     - \U0001F4D3 Technologies: Git, DialogFlow, Machine Learning, Prompt Engineering, Data Science.
     - \U0001F5FA\uFE0F Web Development: HTML, PHP, CSS, PL/SQL.
-    - \U0001F4C8 Databases: Familiarity with Postgres, MongoDB, MySQL.
+    - \U0001F4C8 Databases: Familiarity with PostgreSQL, MongoDB, MySQL.
+    - \U0001F4A1 Backend: REST APIs, NoSQL, and FastAPI.
     """
 )
 
@@ -117,12 +119,24 @@ st.write(
     """
 )
 
+# --- TECHNICAL WRITING ---
+st.write('\n')
+st.subheader("Technical Writing")
+st.write("---")
+st.write(
+    """
+    - Authored technical articles on Medium, focusing on machine learning, data structures, and Python best practices.
+    - [Explore My Articles on Medium](https://medium.com/@bishty2005).
+    """
+)
+
 # --- PROJECTS & ACCOMPLISHMENTS ---
 st.write('\n')
 st.subheader("Projects & Accomplishments")
 st.write("---")
-for project, link in PROJECTS.items():
-    st.write(f"[\U0001F3C6 {project}]({link})")
+for project, details in PROJECTS.items():
+    st.write(f"[\U0001F3C6 {project}]({details['link']})")
+    st.write(details['description'])
 
 # --- VOLUNTEERING ---
 st.write('\n')
@@ -145,3 +159,9 @@ st.write(
     - Earned Data Analytics Certification by Microsoft and LinkedIn.
     """
 )
+
+# --- LEETCODE STATS (Optional Widget) ---
+st.write('\n')
+st.subheader("LeetCode Progress")
+st.write("---")
+st.write("[Check My LeetCode Stats](https://leetcode.com/bishty2005)")
