@@ -4,7 +4,7 @@ from pathlib import Path
 
 # --- PATH SETTINGS ---
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
-css_file = r"C:\Users\bisht\OneDrive\Desktop\Portfolio\styles\main.css"
+#css_file = r"C:\Users\bisht\OneDrive\Desktop\Portfolio\styles\main.css"
 resume_file = r"C:\Users\bisht\OneDrive\Desktop\Portfolio\assets\cv.pdf.pdf"
 profile_pic = r"C:\Users\bisht\OneDrive\Desktop\Portfolio\assets\profile-pic.png"
 
