@@ -4,8 +4,8 @@ from pathlib import Path
 
 # --- PATH SETTINGS ---
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
-resume_file = current_dir / "assets" / "cv.pdf.pdf"
-profile_pic = current_dir / "assets" / "profile-pic.png"
+resume_file = current_dir / "../assets" / "cv.pdf"
+profile_pic = current_dir / "../assets" / "profile-pic.png"
 
 # --- GENERAL SETTINGS ---
 PAGE_TITLE = "Digital CV | Yashika Bisht"
