@@ -23,21 +23,38 @@ SOCIAL_MEDIA = {
 }
 PROJECTS = {
     "Credit Card Fraud Detection": {
-        "description": "This research-based project involved building a machine learning model and implementing it on Streamlit to provide an interactive interface for users. The project uses various algorithms like KNN, Logistic Regression, and GRU for detecting fraud in credit card transactions. It also addresses class imbalance using SMOTE-ENN.",
+        "description": (
+            "This research-based project involved building a machine learning model "
+            "and implementing it on Streamlit to provide an interactive interface for users. "
+            "The project uses various algorithms like KNN, Logistic Regression, and GRU for detecting "
+            "fraud in credit card transactions. It also addresses class imbalance using SMOTE-ENN."
+        ),
         "link": "https://github.com/YashikaBisht1/Credit-Card-Fraud-detection.git"
     },
     "Intelligent Code Debugger and Summarizer": {
-        "description": "Developed an AI-powered Python Code Debugger and Summarizer using Streamlit, CodeT5, and Google GenAI to detect syntax errors, identify unused variables, generate bug fixes, and summarize code functionality.",
+        "description": (
+            "Developed an AI-powered Python Code Debugger and Summarizer using Streamlit, CodeT5, "
+            "and Google GenAI to detect syntax errors, identify unused variables, generate bug fixes, "
+            "and summarize code functionality."
+        ),
         "link": "https://github.com/YashikaBisht1/Intelligent-code-debugger-and-Summariser.git"
     },
     "Personalized Chatbot (Work in Progress)": {
-        "description": "Building a personalized chatbot leveraging Streamlit and LLMs to enhance user interactions and query handling.",
+        "description": (
+            "Building a personalized chatbot leveraging Streamlit and LLMs to enhance "
+            "user interactions and query handling."
+        ),
         "link": "#"
-    }
-    "GenAi cold email generator":{
-        "description":Leveraged Llama3.1, LangChain, and ChromaDB for personalized email generation. Enhanced client outreach for software/AI services.",
+    },
+    "GenAI Cold Email Generator": {
+        "description": (
+            "Leveraged Llama3.1, LangChain, and ChromaDB for personalized email generation. "
+            "Enhanced client outreach for software/AI services."
+        ),
         "link": "https://github.com/YashikaBisht1/project-genai-cold-email-generator"
+    }
 }
+
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
 # --- LOAD PDF & PROFILE PIC ---
@@ -59,7 +76,6 @@ with col2:
         file_name=Path(resume_file).name,
         mime="application/octet-stream",
     )
-
     st.write("\U0001F4E7", EMAIL)
 
 # --- SOCIAL LINKS ---
@@ -98,8 +114,6 @@ st.write(
 st.write('\n')
 st.subheader("Work Experience")
 st.write("---")
-
-# --- JOB 1 ---
 st.write("\U0001F6E0\uFE0F", "**Virtual Software Engineer | JPMorgan Chase**")
 st.write("April 2024, Remote")
 st.write(
@@ -110,13 +124,12 @@ st.write(
     """
 )
 
-# --- JOB 2 ---
 st.write('\n')
 st.write("\U0001F6E0\uFE0F", "**Artificial Intelligence Intern | Infosys SpringBoard**")
 st.write("December 2024, Remote")
 st.write(
     """
-    -Built a personalized chatbot for a Learning Management System using Rasa and optimized API integrations with Postman.
+    - Built a personalized chatbot for a Learning Management System using Rasa and optimized API integrations with Postman.
     - Gained experience with AI frameworks like TensorFlow.
     """
 )
@@ -132,7 +145,7 @@ st.write(
     """
 )
 
-# --- PROJECTS & ACCOMPLISHMENTS ---
+# --- PROJECTS ---
 st.write('\n')
 st.subheader("Projects & Accomplishments")
 st.write("---")
@@ -161,9 +174,3 @@ st.write(
     - Earned Data Analytics Certification by Microsoft and LinkedIn.
     """
 )
-
-# --- LEETCODE STATS (Optional Widget) ---
-st.write('\n')
-st.subheader("LeetCode Progress")
-st.write("---")
-st.write("[Check My LeetCode Stats](https://leetcode.com/bishty2005)")
