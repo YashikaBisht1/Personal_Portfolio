@@ -34,6 +34,9 @@ PROJECTS = {
         "description": "Building a personalized chatbot leveraging Streamlit and LLMs to enhance user interactions and query handling.",
         "link": "#"
     }
+    "GenAi cold email generator":{
+        "description":Leveraged Llama3.1, LangChain, and ChromaDB for personalized email generation. Enhanced client outreach for software/AI services.",
+        "link": "https://github.com/YashikaBisht1/project-genai-cold-email-generator"
 }
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
@@ -109,13 +112,12 @@ st.write(
 
 # --- JOB 2 ---
 st.write('\n')
-st.write("\U0001F6E0\uFE0F", "**Virtual Software Engineer | Goldman Sachs**")
-st.write("April 2024, Remote")
+st.write("\U0001F6E0\uFE0F", "**Artificial Intelligence Intern | Infosys SpringBoard**")
+st.write("December 2024, Remote")
 st.write(
     """
-    - Conducted IT security assessments and recommended password protection enhancements.
-    - Used Hashcat to identify weak password hashing algorithms.
-    - Drafted improvement proposals for stronger security measures.
+    -Built a personalized chatbot for a Learning Management System using Rasa and optimized API integrations with Postman.
+    - Gained experience with AI frameworks like TensorFlow.
     """
 )
 
